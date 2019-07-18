@@ -6525,35 +6525,86 @@ input[type=range]::-ms-thumb {
     text-align: center;
     margin-top: 1.2rem; } }
 
-* {
-  padding: 0;
-  margin: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box; }
 
 body {
-  background: url("/dist/img/architectural-design-architecture-building-443383.jpg") no-repeat;
+  background: url("/dist/img/architectural-design-architecture-building-443383.jpg") no-repeat fixed;
   background-size: 100vw;
-  background-color: grey; }
+  background-color: grey;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat, Arial, Helvetica, sans-serif; }
 
-.container {
+.containerLogin {
   width: 100vw;
   height: 100vh;
   margin: auto;
   display: flex; }
-  .container .loginForm {
+  .containerLogin .loginForm {
     margin: auto;
     padding: 1em;
     width: 20vw;
     height: 40vh;
-    background: white;
+    background: rgba(201, 201, 201, 0.8);
     border-radius: 10px;
     box-shadow: 5px 5px 15px #000; }
-    .container .loginForm h1 {
-      color: grey;
-      font-size: 3em;
-      text-transform: uppercase; }
-    .container .loginForm input {
+    .containerLogin .loginForm h1 {
+      color: white;
+      font-size: 2.5em;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px #000; }
+    .containerLogin .loginForm input {
       width: 100%;
       margin: 7px auto;
       height: 3em;
       border-radius: 5px; }
+    .containerLogin .loginForm p {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-top: 0.5em; }
+
+.containerApi {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap; }
+  .containerApi .feeds {
+    padding: 10px;
+    height: 60vh;
+    flex-basis: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #e0eafc;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(90deg, #e0eafc, #cfdef3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg, #e0eafc, #cfdef3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 5px 5px 15px #000; }
+
+.api-01 {
+  overflow: scroll; }
+  .api-01 .animatedClock {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2.53em; }
+  .api-01 .clockInOutButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+
+.api-02 {
+  overflow: scroll;
+  height: 50vh; }
+  .api-02 .accordian {
+    margin-bottom: 1em; }
+    .api-02 .accordian a {
+      color: #a93f55; }
+    .api-02 .accordian .header {
+      text-transform: uppercase;
+      font-weight: bold; }
