@@ -1,20 +1,22 @@
 @import "materialize";
 
-* {
-  padding: 0;
-  margin: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
   background: url("/dist/img/architectural-design-architecture-building-443383.jpg")
-    no-repeat;
+    no-repeat fixed;
   background-size: 100vw;
   background-color: grey;
-  // font-family: Arial, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
-.container {
+.containerLogin {
   width: 100vw;
   height: 100vh;
   margin: auto;
@@ -25,14 +27,14 @@ body {
     padding: 1em;
     width: 20vw;
     height: 40vh;
-    // border: #ff0000 1px solid;
-    background: rgba(255, 255, 255, 1);
+    background: rgba(201, 201, 201, 0.8);
     border-radius: 10px;
     box-shadow: 5px 5px 15px #000;
     h1 {
-      color: grey;
-      font-size: 3em;
+      color: white;
+      font-size: 2.5em;
       text-transform: uppercase;
+      text-shadow: 2px 2px 4px #000;
     }
     input {
       width: 100%;
@@ -40,5 +42,72 @@ body {
       height: 3em;
       border-radius: 5px;
     }
+
+    p {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-top: 0.5em;
+    }
   }
 }
+
+.containerApi {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .feeds {
+    padding: 10px;
+    height: 60vh;
+    flex-basis: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #e0eafc;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(90deg, #e0eafc, #cfdef3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg, #e0eafc, #cfdef3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 5px 5px 15px #000;
+  }
+}
+
+// Company Info and Timecard
+.api-01 {
+  overflow: scroll;
+  .animatedClock {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2.53em;
+  }
+  .clockInOutButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+// Studio Ghibli Movies Api
+.api-02 {
+  overflow: scroll;
+  height: 50vh;
+  .accordian {
+    margin-bottom: 1em;
+    a {
+      color: #a93f55;
+    }
+    .header {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}
+
+// .api-03 {
+// }
+
+// .api-04 {
+// }
