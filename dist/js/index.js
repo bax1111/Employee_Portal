@@ -1,8 +1,45 @@
 // API 03
 const topNewsStories = document.querySelector(".api-02");
 const bitcoin = document.querySelector(".api-03");
+const date = document.querySelector(".currentDate");
 const clock = document.querySelector(".animatedClock");
 setInterval(displayClock, 500);
+
+function theCurrentday() {
+  let d = new Date();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  date.innerHTML =
+    days[d.getDay()] +
+    " " +
+    months[d.getMonth()] +
+    " " +
+    d.getDate() +
+    ", " +
+    d.getFullYear();
+}
 function clockIn() {
   let d = new Date();
   let t = d.toLocaleTimeString();
@@ -99,3 +136,4 @@ function renderBitcoinDisplay(data) {
 
 newsHeadlinesData();
 bitcoinPrice();
+theCurrentday();
