@@ -1,9 +1,9 @@
 // API 03
 const topNewsStories = document.querySelector(".api-02");
-const bitcoin = document.querySelector(".api-03");
+const weather = document.querySelector(".api-03");
 const date = document.querySelector(".currentDate");
 const clock = document.querySelector(".animatedClock");
-setInterval(displayClock, 500);
+// setInterval(displayClock, 500);
 
 function theCurrentday() {
   let d = new Date();
@@ -82,10 +82,8 @@ function displayClock() {
 }
 
 function newsHeadlinesData() {
-  const url =
-    "https://newsapi.org/v2/top-headlines?" +
-    "country=us&" +
-    "apiKey=4022ff600d7e43d097033fddc678d0c9";
+  const url = `
+    https://newsapi.org/v2/top-headlines?country=us&apiKey=4022ff600d7e43d097033fddc678d0c9`;
   fetch(url)
     .then(res => res.json())
     .then(topHeadlines => {
@@ -112,28 +110,31 @@ function renderHeadlines(topHeadlines) {
     .join("");
 }
 
-function bitcoinPrice() {
-  fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
+function currentWeatherData() {
+  fetch(
+    "http://api.openweathermap.org/data/2.5/weather?zip=34953,us&appid=4817b8a1df35479309ffcdb8959d4f8e"
+  )
     .then(res => res.json())
     .then(data => {
-      renderBitcoinDisplay(data);
+      renderCurrentWeatherDisplay(data);
     })
     .catch(err => console.log(err));
 }
 
-function renderBitcoinDisplay(data) {
-  const price = `
+function renderCurrentWeatherDisplay(data) {
+  const currentWeather = `
     <div class="">
-        <h3>Current Bitcoin Price</h3>
+        <h2>Current Weather</h2>
       </div>
-      <p>Description: ${data.chartName}</p>
-      <p>Price in ${data.bpi.USD.code}: ${data.bpi.USD.symbol}${
-    data.bpi.USD.rate_float
-  }
+      <h3>${data.name}</h3>
+      <p>${data.weather.description}</p>
+      <img src="${data.weather.icon}" alt="">
+      <p>Temperature: ${data.main.temp}</p>
+      <p>Humidity: ${data.main.humidity}%</p>
     `;
-  bitcoin.innerHTML = price;
+  weather.innerHTML = currentWeather;
 }
 
-newsHeadlinesData();
-bitcoinPrice();
-theCurrentday();
+// newsHeadlinesData();
+// currentWeatherData();
+// theCurrentday();
