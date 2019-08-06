@@ -1,7 +1,6 @@
 {
   "name": "employee_portal",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -18,5 +17,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Willy Anicette",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bax1111/Employee_Portal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bax1111/Employee_Portal/issues"
+  },
+  "homepage": "https://github.com/bax1111/Employee_Portal#readme",
+  "description": ""
 }

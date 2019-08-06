@@ -52,40 +52,107 @@ body {
 .containerApi {
   height: 100vh;
   display: flex;
-  // justify-content: space-evenly;
-  // align-items: center;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
   background: #ffffffea;
+  .container-right-side {
+    flex-basis: 80vw;
+    .container-right-side-nav {
+      // background: red;
+      flex-basis: 100%;
+      height: 100px;
+      padding: 1rem;
+      .container-nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        div {
+          padding: 0 10px;
+          margin: 0;
+        }
+      }
+    }
+  }
 
   .sidebar {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 20vw;
+    flex-direction: column;
+    padding: 10px;
+    width: 18vw;
     height: 100vh;
     background: #ffffffea;
     box-shadow: 3px 3px 15px #000;
+
+    .collection {
+      width: 100%;
+      border: 0 solid;
+      .active {
+        background: #ab47bc;
+        color: white;
+      }
+      a {
+        color: grey;
+      }
+      .collection-item {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        i {
+          padding-right: 10px;
+        }
+      }
+    }
+    hr {
+      width: 16vw;
+    }
+    .sidebar-account-name {
+      margin: 10px auto;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
   }
 
-  .feeds {
-    padding: 10px;
-    height: 60vh;
-    flex-basis: 450px;
-    border: 1px solid black;
-    border-radius: 10px;
-    background: #e0eafc;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(90deg, #e0eafc, #cfdef3);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(90deg, #e0eafc, #cfdef3);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    box-shadow: 5px 5px 15px #000;
+  .container-api-feeds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-basis: 80vw;
+
+    .feeds {
+      flex-wrap: wrap;
+      padding: 10px;
+      height: 70vh;
+      flex-basis: 23vw;
+      border-radius: 8px;
+      background: white;
+      margin-top: 13rem;
+      box-shadow: 1px 1px 15px grey;
+
+      .api-header {
+        width: 95%;
+        height: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -30px;
+        border-radius: 3px;
+        box-shadow: 5px 5px 5px grey;
+        font-size: 22px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+      }
+    }
   }
 }
 
 // Company Info and Timecard
 .api-01 {
-  overflow: scroll;
+  // overflow: scroll;
   .dateTime {
     text-align: center;
     font-size: 2.5em;
@@ -99,8 +166,8 @@ body {
 
 // News API
 .api-02 {
-  overflow: scroll;
-  height: 50vh;
+  // overflow: hidden;
+  // height: 50vh;
   .accordian {
     margin-bottom: 1em;
     a {

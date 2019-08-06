@@ -3,7 +3,7 @@ const topNewsStories = document.querySelector(".api-02");
 const weather = document.querySelector(".api-03");
 const date = document.querySelector(".currentDate");
 const clock = document.querySelector(".animatedClock");
-// setInterval(displayClock, 500);
+setInterval(displayClock, 500);
 
 function theCurrentday() {
   let d = new Date();
@@ -135,6 +135,6 @@ function renderCurrentWeatherDisplay(data) {
   weather.innerHTML = currentWeather;
 }
 
-// newsHeadlinesData();
-// currentWeatherData();
-// theCurrentday();
+newsHeadlinesData();
+currentWeatherData();
+theCurrentday();
