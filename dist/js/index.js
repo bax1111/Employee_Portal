@@ -124,9 +124,9 @@ function currentWeatherData() {
 function renderCurrentWeatherDisplay(data) {
   const currentWeather = `
     <div class="">
-        <h2>Current Weather</h2>
+        <h3>Current Weather</h3>
       </div>
-      <h3>${data.name}</h3>
+      <h4>${data.name}</h4>
       <p>${data.weather.description}</p>
       <img src="${data.weather.icon}" alt="">
       <p>Temperature: ${data.main.temp}</p>

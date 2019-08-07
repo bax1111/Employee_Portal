@@ -64,8 +64,19 @@ body {
       .container-nav-links {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        align-items: flex-end;
+        // justify-content: flex-end;
+        // align-items: flex-end;
+        .date-time {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-weight: bold;
+        }
+        .clockInOutButtons {
+          justify-content: center;
+          margin: 0 20px;
+        }
+
         div {
           padding: 0 10px;
           margin: 0;
@@ -127,7 +138,7 @@ body {
       flex-basis: 23vw;
       border-radius: 8px;
       background: white;
-      margin-top: 13rem;
+      margin-top: 3rem;
       box-shadow: 1px 1px 15px grey;
 
       .api-header {
@@ -152,7 +163,8 @@ body {
 
 // Company Info and Timecard
 .api-01 {
-  // overflow: scroll;
+  overflow: scroll;
+  height: 58vh;
   .dateTime {
     text-align: center;
     font-size: 2.5em;
@@ -166,8 +178,8 @@ body {
 
 // News API
 .api-02 {
-  // overflow: hidden;
-  // height: 50vh;
+  overflow: scroll;
+  height: 58vh;
   .accordian {
     margin-bottom: 1em;
     a {
