@@ -9,6 +9,8 @@
 body {
   background: url("/dist/img/bg_img.jpg") no-repeat fixed;
   background-size: 100vw;
+  min-width: 1080px;
+
   padding: 0;
   margin: 0;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
@@ -24,7 +26,9 @@ body {
     margin: auto;
     padding: 1em;
     width: 20vw;
-    height: 40vh;
+    min-width: 250px;
+    max-width: 500px;
+    height: 50vh;
     background: rgba(201, 201, 201, 0.8);
     border-radius: 10px;
     box-shadow: 5px 5px 15px #000;
@@ -58,29 +62,14 @@ body {
     flex-basis: 80vw;
     .container-right-side-nav {
       // background: red;
-      flex-basis: 100%;
+      flex-basis: 80vw;
       height: 100px;
-      padding: 1rem;
-      .container-nav-links {
-        display: flex;
-        flex-direction: row;
-        // justify-content: flex-end;
-        // align-items: flex-end;
-        .date-time {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          font-weight: bold;
-        }
-        .clockInOutButtons {
-          justify-content: center;
-          margin: 0 20px;
-        }
-
-        div {
-          padding: 0 10px;
-          margin: 0;
-        }
+      padding: 2rem;
+      .container-right-side-header {
+        padding-bottom: 1em;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-transform: uppercase;
       }
     }
   }
@@ -102,6 +91,7 @@ body {
       .active {
         background: #ab47bc;
         color: white;
+        border-radius: 5px;
       }
       a {
         color: grey;
@@ -138,7 +128,7 @@ body {
       flex-basis: 23vw;
       border-radius: 8px;
       background: white;
-      margin-top: 3rem;
+      margin-top: 4.5rem;
       box-shadow: 1px 1px 15px grey;
 
       .api-header {
@@ -158,6 +148,26 @@ body {
         color: white;
       }
     }
+  }
+}
+.container-nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-basis: 80vw;
+  .material-icons {
+    color: grey;
+    padding: 0 0.5rem;
+  }
+  .date-time {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 5px white;
+  }
+  #search {
+    width: 50%;
+    height: 2rem;
+    margin: 0;
   }
 }
 
@@ -192,8 +202,28 @@ body {
   }
 }
 
-// .api-03 {
-// }
+// Weather
+.api-03 {
+  display: flex;
+  flex-direction: column;
+  .weather-feed-cityName {
+    font-size: 2.5em;
+  }
+  .weather-feed-desc {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.5em;
 
-// .api-04 {
-// }
+    width: 45%;
+  }
+  .weather-feed-iconTemp {
+    font-size: 2em;
+  }
+  .weather-feed-hum {
+  }
+}
+
+.weather-feed-cond {
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -1,4 +1,3 @@
-// API 03
 const topNewsStories = document.querySelector(".api-02");
 const weather = document.querySelector(".api-03");
 const date = document.querySelector(".currentDate");
@@ -112,7 +111,7 @@ function renderHeadlines(topHeadlines) {
 
 function currentWeatherData() {
   fetch(
-    "http://api.openweathermap.org/data/2.5/weather?zip=34953,us&appid=4817b8a1df35479309ffcdb8959d4f8e"
+    "http://api.openweathermap.org/data/2.5/weather?zip=34953,us&units=imperial&appid=4817b8a1df35479309ffcdb8959d4f8e"
   )
     .then(res => res.json())
     .then(data => {
@@ -123,14 +122,15 @@ function currentWeatherData() {
 
 function renderCurrentWeatherDisplay(data) {
   const currentWeather = `
-    <div class="">
-        <h3>Current Weather</h3>
-      </div>
-      <h4>${data.name}</h4>
-      <p>${data.weather.description}</p>
-      <img src="${data.weather.icon}" alt="">
-      <p>Temperature: ${data.main.temp}</p>
-      <p>Humidity: ${data.main.humidity}%</p>
+    <div class="weather-feed-cityName">${data.name}</div>
+    <div class="weather-feed-cond">
+      <div class="weather-feed-desc">${data.weather[0].description}</div>
+      
+      <div class="weather-feed-iconTemp"><img src="http://openweathermap.org/img/wn/${
+        data.weather[0].icon
+      }.png" alt="Clear Sky"> ${Math.floor(data.main.temp)}° F</div>
+    </div>
+    <div class="weather-feed-hum">Humidity: ${data.main.humidity}%</div>
     `;
   weather.innerHTML = currentWeather;
 }
