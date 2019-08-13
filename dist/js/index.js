@@ -111,7 +111,7 @@ function renderHeadlines(topHeadlines) {
 
 function currentWeatherData() {
   fetch(
-    "http://api.openweathermap.org/data/2.5/weather?zip=34953,us&units=imperial&appid=4817b8a1df35479309ffcdb8959d4f8e"
+    "https://api.openweathermap.org/data/2.5/weather?zip=34953,us&units=imperial&appid=4817b8a1df35479309ffcdb8959d4f8e"
   )
     .then(res => res.json())
     .then(data => {
@@ -126,7 +126,7 @@ function renderCurrentWeatherDisplay(data) {
     <div class="weather-feed-cond">
       <div class="weather-feed-desc">${data.weather[0].description}</div>
       
-      <div class="weather-feed-iconTemp"><img src="http://openweathermap.org/img/wn/${
+      <div class="weather-feed-iconTemp"><img src="https://openweathermap.org/img/wn/${
         data.weather[0].icon
       }.png" alt="Clear Sky"> ${Math.floor(data.main.temp)}° F</div>
     </div>
