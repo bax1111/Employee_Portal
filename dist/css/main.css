@@ -6531,7 +6531,7 @@ input[type=range]::-ms-thumb {
   box-sizing: border-box; }
 
 body {
-  background: url("/dist/img/bg_img.jpg") no-repeat fixed;
+  background: url("../img/bg_img.jpg") no-repeat fixed;
   background-size: 100vw;
   min-width: 1080px;
   padding: 0;

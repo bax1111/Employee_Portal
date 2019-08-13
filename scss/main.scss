@@ -7,7 +7,7 @@
 }
 
 body {
-  background: url("/dist/img/bg_img.jpg") no-repeat fixed;
+  background: url("../img/bg_img.jpg") no-repeat fixed;
   background-size: 100vw;
   min-width: 1080px;
 
@@ -218,8 +218,6 @@ body {
   }
   .weather-feed-iconTemp {
     font-size: 2em;
-  }
-  .weather-feed-hum {
   }
 }
 
