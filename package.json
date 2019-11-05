@@ -8,7 +8,7 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
     "materialize-css": "^1.0.0-rc.2",
-    "mongoose": "^5.5.8"
+    "mongoose": "^5.7.5"
   },
   "devDependencies": {
     "run-sequence": "^2.2.1"
